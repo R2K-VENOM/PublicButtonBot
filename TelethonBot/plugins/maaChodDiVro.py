@@ -24,13 +24,10 @@ async def _(event):
 async def amdddd(event):
   if event.is_private:
     return await event.reply("vro use this cmd in group not in pm")
-  if event.sender_id in SMEX_USER:
+  else:
       text = event.pattern_match.group(1)
       k = [[Button.text(text)]]
-      await BotzHub.send_message(event.chat_id, "**SEMX STARTED**", buttons=k)
-  else:
-      await event.reply("**BHAI YAAR THUM GAAND MARAO**")
-    
+      await BotzHub.send_message(event.chat_id, "**SEMX STARTED**", buttons=k)    
  
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 @BotzHub.on(events.callbackquery.CallbackQuery(data="creator"))
