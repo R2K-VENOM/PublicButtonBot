@@ -22,9 +22,6 @@ async def _(event):
     events.NewMessage(pattern="^/skem ?(.*)")
 )
 async def amdddd(event):
-  if event.is_private:
-    return await event.reply("vro use this cmd in group not in pm")
-  else:
       text = event.pattern_match.group(1)
       k = [[Button.text(text)]]
       await BotzHub.send_message(event.chat_id, "**SEMX STARTED**", buttons=k)    
